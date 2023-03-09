@@ -85,3 +85,12 @@ variable "vpc_connector_region_map" {
     asia-south2 = "asia-south1",
   }
 }
+
+variable "mtu" {
+  type        = number
+  description = <<EOD
+The network MTU. Must be a value between 1460 and 1500 inclusive. If set to 0
+(meaning MTU is unset), the network will default to 1460 automatically.
+EOD
+  default     = 0
+}
